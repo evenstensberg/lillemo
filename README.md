@@ -28,7 +28,7 @@ var App = React.createClass({
 
   validateData: function() {
     if(findDepth(dataUpdate) > 4) { 
-      console.log('Our data is have not loaded yet')
+      console.log('Our data have not loaded yet')
       // run some action or what you need to do here
     }
     else { 
