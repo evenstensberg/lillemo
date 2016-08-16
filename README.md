@@ -21,6 +21,7 @@ Lillemo helps you manage circular references in a functional approach. It has in
 As a great side-effect of plain-javascript, you can use Lillemo where you would. For an instance, check how big an object is. If you want to see more examples, where we use our core functionalities, [check it out]()!
 ***
 ```js
+import React from 'react'
 import findDepth from 'lillemo'
 
 var App = React.createClass({
