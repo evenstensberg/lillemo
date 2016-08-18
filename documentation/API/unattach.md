@@ -25,7 +25,7 @@ const limitObj = unattach(myObj, myObj.some.deep.val)
 ```js
 import {unattach} from 'lillemo'
 
-const limitObj = pin(myObj, myObj.some.deep.val)
+const limitObj = unattach(myObj, myObj.some.deep.val)
 
 // Outputs
 {
