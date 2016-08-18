@@ -38,4 +38,4 @@ const exampleObject = attach(attachObj, 1, 'Swedish-Object', Sweden)
    'Swedish-Object': 'Sebastian Markbaage' // Sweden obj
   }
 ```
-[Next Chapter - CyclicEvent](https://github.com/ev1stensberg/lillemo/blob/master/documentation/API/cyclicEvent.md)
+[Next Chapter - createCircularEvent](https://github.com/ev1stensberg/lillemo/blob/master/documentation/API/createCircularEvent.md)
