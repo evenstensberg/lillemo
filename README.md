@@ -1,4 +1,4 @@
-<img src="https://github.com/ev1stensberg/lillemo/blob/master/logo/lillemo.png" align="left" height="180" "/>
+# <a href='https://github.com/ev1stensberg/lillemo'><img src="https://github.com/ev1stensberg/lillemo/blob/master/logo/lillemo.png" align="left" height="180" "/></a>
 
 
 
