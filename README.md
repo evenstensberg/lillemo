@@ -44,7 +44,6 @@ var App = React.createClass({
  * [API](https://github.com/ev1stensberg/lillemo/tree/master/documentation/API)
  * [Examples](https://github.com/ev1stensberg/lillemo/tree/master/documentation/Examples)
  * [Roadmap](https://github.com/ev1stensberg/lillemo/blob/master/ROADMAP.md)
- * [Glossary](https://github.com/ev1stensberg/lillemo/tree/master/documentation/Glossary)
  * [Changelog](https://github.com/ev1stensberg/lillemo/blob/master/CHANGELOG.md)
 
 ##Why you should use Lillemo
