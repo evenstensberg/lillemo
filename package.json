@@ -1,6 +1,6 @@
 {
   "name": "lillemo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Convert your circular references to functions",
   "main": "lib/index.js",
   "module": "es/index.js",
