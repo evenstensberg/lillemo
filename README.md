@@ -1,4 +1,4 @@
-<img src="https://s32.postimg.org/6tenkyad1/lillemo.png" align="left" height="180" "/>
+<img src="https://github.com/ev1stensberg/lillemo/blob/master/logo/lillemo.png" align="left" height="180" "/>
 
 
 
