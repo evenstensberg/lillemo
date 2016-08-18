@@ -1,6 +1,6 @@
 #createCircularEvent
 
-##createCircularEvent(source, boolean)
+##createCircularEvent(source, bool)
 
 ##Summary
 
@@ -14,9 +14,7 @@ const createObj = createCircularEvent(someObj, true)
 ##Params
 
 * **source(object)** - The object you want to add something to
-* **targetDepth(number)** - the place/depth of the object you're adding the touple to
-* **key(any)** - The key you want it to have
-* **value(any)** - Given value you are adding
+* **bool(boolean)** - Given the object you are creating, will warn you if true, otherwise you clone the given object in first param
 
 ##Returns
 
