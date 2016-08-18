@@ -18,7 +18,7 @@ Lillemo helps you manage circular references in a functional approach. It has in
 ***
 ##Example
 ***
-As a great side-effect of plain-javascript, you can use Lillemo with any library using JavaScript. Here is an example of one of our methods, `findDepth`. If you want to see more examples, where we use our core functionalities, [check it out]()!
+As a great side-effect of plain-javascript, you can use Lillemo with any library using JavaScript. Here is an example of one of our methods, `findDepth`. If you want to see more examples, where we use our core functionalities, check out the API documentation!
 ***
 ```js
 import React from 'react'
