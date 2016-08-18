@@ -13,7 +13,6 @@ import isCyclic from './utils/isCyclic'
 import isSelfAttached from './utils/isSelfAttached'
 
 export {
-  errorMessage,
   isCyclic,
   findDepth,
   limit,
