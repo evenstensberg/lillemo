@@ -61,7 +61,7 @@ Lillemo is great out of the box. We do not use classes, which might be a good th
 ***
 ##Installation 
 ***
-To be announced, once we publish the build
+ `npm install --save-dev lillemo`
 ***
 ##Contribution
 ***
