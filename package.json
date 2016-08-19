@@ -58,7 +58,6 @@
     "eslint-plugin-import": "^1.13.0",
     "eslint-plugin-react": "^6.1.0",
     "expect": "^1.20.2",
-    "unexpected": "^10.15.1",
     "webpack": "^1.13.1"
   },
   "npmName": "lillemo",
