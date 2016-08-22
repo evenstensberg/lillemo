@@ -1,29 +1,37 @@
-// disconnect your reference and create a new key for it as an individual object
+import { errorMessage } from './utils/errorMessage';
+import invariant from 'invariant';
 
-module.exports = function unattach(source, value) {
-  /*
-  let returnedObj;
-   if(typeof value !== 'object') {
-    errorMessage(value)
+module.exports = function (source, targetObject) {
+  if (!targetObject) {
+    errorMessage(null, targetObject);
   }
-  if(/) {
-    for(value in source) {
-    if(source[value] !== value) {
-        iterate(source, 0)
-    }
-    if(source.hasOwnProperty(value) && value === source) {
-      returnedObject = Object.defineProperty(source, value, {
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-      delete source[value]
-      return returnedObject
-    }
+  if (!source) {
+    errorMessage(null, source);
   }
-  }
-  else {
-    errorMessage(source)
-  }
-  */
+  return traverse(source, targetObject);
 };
+
+function traverse(source, targetObject) {
+  var depth = 0;
+  function iterate(source, depth, targetObject) {
+    Object.keys(source).forEach(function (key) {
+      if (depth === 7) {
+        invariant(source, source + ' cannot have more than seven levels, as this will be inefficient.');
+        return source;
+      }
+      if (targetObject !== key) {
+        return iterate(source[key], depth + 1, targetObject);
+      }
+      if (targetObject === key) {
+        key = Object.defineProperty(source, key, {
+          enumerable: true,
+          configurable: false,
+          writable: false
+        });
+        return true;
+      }
+    });
+  }
+  iterate(source, depth + 1, targetObject);
+  return source;
+}

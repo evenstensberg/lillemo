@@ -52,17 +52,13 @@
 	import preserve from './preserve'
 	import unattach from './unattach'
 	import attach from './attach'
+
 	// utils
 	import errorMessage from './utils/errorMessage'
 	import isCyclic from './utils/isCyclic'
-	import isRoot from './utils/isRoot'
 	import isSelfAttached from './utils/isSelfAttached'
-	import validate from './utils/validate'
-	import iterate from './utils/isSelfAttached'
 
 	export {
-	  errorMessage,
-	  isRoot,
 	  isCyclic,
 	  findDepth,
 	  limit,
@@ -70,7 +66,6 @@
 	  preserve,
 	  attach,
 	  unattach,
-	  validate,
 	  isSelfAttached,
 	  createCircularEvent
 	}

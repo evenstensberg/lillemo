@@ -1,29 +1,33 @@
-// Preserve its values, even on changes
 import { errorMessage } from './utils/errorMessage';
-import { iterate } from './utils/isSelfAttached';
+import invariant from 'invariant';
 
-module.exports = function preserve(source, value) {
-  /*
-    if(typeof value !== 'object') {
-      errorMessage(value)
-    }
-    if() {
-      for(value in source) {
-      if(source[value] !== value) {
-          iterate(source, 0)
-      }
-      if(source.hasOwnProperty(value) && value === source) {
-        Object.defineProperty(source, value, {
-          enumerable: true,
-          configurable: false,
-          writable: false
-        });
-        return source[value]
-      }
-    }
-    }
-    else {
-      errorMessage(source)
-    }
-    */
+module.exports = function (source, targetObject) {
+  if (!targetObject) {
+    errorMessage(null, targetObject);
+  }
+  if (!source) {
+    errorMessage(null, source);
+  }
+  return traverse(source, targetObject);
 };
+
+function traverse(source, targetObject) {
+  var depth = 0;
+  function iterate(source, depth, targetObject) {
+    Object.keys(source).forEach(function (key) {
+      if (depth === 7) {
+        invariant(source, source + ' cannot have more than seven levels, as this will be inefficient.');
+        return source;
+      }
+      if (targetObject !== key) {
+        return iterate(source[key], depth + 1, targetObject);
+      }
+      if (targetObject === key) {
+        delete source[key];
+        return;
+      }
+    });
+  }
+  iterate(source, depth + 1, targetObject);
+  return source;
+}

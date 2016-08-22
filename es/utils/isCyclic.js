@@ -15,6 +15,5 @@ export function isCyclic(obj) {
     }
     return false;
   }
-
   return detect(obj);
 }
